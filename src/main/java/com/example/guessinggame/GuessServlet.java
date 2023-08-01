@@ -30,12 +30,12 @@ public class GuessServlet extends HttpServlet {
         for (String s : game.getPreviousGuesses()) {
             response.getWriter().println(s + "</br>");
         }
-
-        response.getWriter().println("Answer: " + reply + form + "</body></html>");
+        response.getWriter().println("Answer: " + reply +
+                form + "</body></html>");
     }
 
     String form = """
-            <form method="post" action="/guess">
+            <form action="/guess" method="post">
                 <input type="text" name="guessString" size="8"/>
                 <input type="submit" value="Guess"/>
             </form>
