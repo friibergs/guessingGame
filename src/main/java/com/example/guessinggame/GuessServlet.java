@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet
+@WebServlet("/guess")
 public class GuessServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
